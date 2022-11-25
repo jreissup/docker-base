@@ -20,6 +20,6 @@ jobs:
         username: ${{secrets.DOCKER_USER}}
         password: ${{secrets.DOCKER_PASSWORD}}
     - name: Build the Docker image
-      run: docker build . --build-arg build_date=$(date +'%Y-%m-%d') --file Dockerfile --tag jreissup/ubuntu-base
+      run: docker build . --build-arg build_date=$(date +'%Y-%m-%d') --file Dockerfile --tag jreissup/docker-base
     - name: Docker Push
-      run: docker push jreissup/ubuntu-base
+      run: docker push jreissup/docker-base
