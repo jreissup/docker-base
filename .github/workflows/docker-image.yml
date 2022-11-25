@@ -20,6 +20,6 @@ jobs:
         username: ${{secrets.DOCKER_USER}}
         password: ${{secrets.DOCKER_PASSWORD}}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/ubuntu-base:$(date +%s)
+      run: docker build . --file Dockerfile --tag jreissup/ubuntu-base:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/ubuntu-base
+      run: docker push jreissup/ubuntu-base
